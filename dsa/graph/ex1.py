@@ -5,3 +5,11 @@
 
 #
 
+import matplotlib.pyplot as plt
+
+x = [20, 21, 22, 23]
+y = [76, 79, 85, 90]
+
+plt.plot(x, y)
+plt.show()
+

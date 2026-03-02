@@ -1,0 +1,51 @@
+# Site-specific scraping strategies
+# The agent consults this configuration when deciding how to access a URL
+
+# Default strategy for unknown sites
+defaults:
+  strategy: fetch          # "fetch" (requests+BS4) or "browse" (Selenium)
+  timeout: 15              # seconds
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+# Per-site overrides
+# URL patterns are matched using glob-style patterns
+sites:
+  - pattern: "*.github.com/*"
+    strategy: fetch
+    notes: "Static content, works well with requests"
+
+  - pattern: "*.stackoverflow.com/*"
+    strategy: fetch
+    notes: "Static content, questions and answers"
+
+  - pattern: "*.reddit.com/*"
+    strategy: browse
+    notes: "Heavy JS rendering, needs browser"
+    wait_seconds: 5
+
+  - pattern: "*.twitter.com/*"
+    strategy: browse
+    notes: "SPA, requires browser"
+    wait_seconds: 5
+
+  - pattern: "*.x.com/*"
+    strategy: browse
+    notes: "SPA, requires browser"
+    wait_seconds: 5
+
+  - pattern: "*data.copart.com/*"
+    strategy: copart
+    notes: "Requires manual login, use query_copart tool"
+    requires_login: true
+
+  - pattern: "*.medium.com/*"
+    strategy: fetch
+    notes: "Mostly static articles"
+
+  - pattern: "*.wikipedia.org/*"
+    strategy: fetch
+    notes: "Static content, excellent for research"
+
+  - pattern: "*.docs.python.org/*"
+    strategy: fetch
+    notes: "Python documentation is static"

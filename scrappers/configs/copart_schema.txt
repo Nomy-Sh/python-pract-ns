@@ -1,0 +1,19 @@
+# Copart Database Schema Information
+# Update this file with actual table and column names once you explore the portal
+
+## Example Schema (UPDATE WITH ACTUAL SCHEMA):
+
+Tables:
+- vehicles: id, make, model, year, vin, lot_number, sale_date, location, damage_type
+- auctions: id, auction_date, location, total_lots
+- sales: id, vehicle_id, sale_price, buyer_id, sale_date
+- locations: id, yard_name, city, state, country
+
+Common Queries:
+- Find vehicles by make/model: SELECT * FROM vehicles WHERE make = 'Toyota' AND model = 'Camry'
+- Sales in date range: SELECT * FROM sales WHERE sale_date BETWEEN '2024-01-01' AND '2024-12-31'
+- Vehicles by location: SELECT * FROM vehicles JOIN locations ON vehicles.location_id = locations.id WHERE locations.state = 'CA'
+
+Notes:
+- Date format: YYYY-MM-DD
+- Price in USD

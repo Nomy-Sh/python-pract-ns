@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: scrappers
+Version: 0.2.0
+Summary: Web scraping toolkit with agentic AI capabilities
+Requires-Python: >=3.8
+Requires-Dist: selenium>=4.16.0
+Requires-Dist: webdriver-manager>=4.0.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: schedule>=1.2.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: duckduckgo-search>=4.0.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pyyaml>=6.0.0

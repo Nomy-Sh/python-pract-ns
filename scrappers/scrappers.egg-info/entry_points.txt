@@ -1,0 +1,4 @@
+[console_scripts]
+agent-chat = cli.chat:main
+agent-voice = voice_chat:main
+ollama-voice = ollama_voice:main

@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "Ollama Local API",
+    "description": "Collection for testing Ollama locally",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:11434/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "2. List Models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:11434/api/tags",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": ["api", "tags"]
+        }
+      }
+    },
+    {
+      "name": "3. Chat (OpenAI Compatible)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"llama3.1:latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"What is Python? Answer in one sentence.\"\n    }\n  ],\n  \"temperature\": 0.7,\n  \"max_tokens\": 100\n}"
+        },
+        "url": {
+          "raw": "http://localhost:11434/v1/chat/completions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": ["v1", "chat", "completions"]
+        }
+      }
+    },
+    {
+      "name": "4. Generate (Native Ollama)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"llama3.1:latest\",\n  \"prompt\": \"What is machine learning? Answer briefly.\",\n  \"stream\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:11434/api/generate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": ["api", "generate"]
+        }
+      }
+    },
+    {
+      "name": "5. Chat (Native Ollama)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"llama3.1:latest\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Hello! What can you do?\"\n    }\n  ],\n  \"stream\": false\n}"
+        },
+        "url": {
+          "raw": "http://localhost:11434/api/chat",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": ["api", "chat"]
+        }
+      }
+    },
+    {
+      "name": "6. Model Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"llama3.1:latest\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:11434/api/show",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "11434",
+          "path": ["api", "show"]
+        }
+      }
+    }
+  ]
+}

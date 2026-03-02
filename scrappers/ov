@@ -1,0 +1,4 @@
+#!/bin/bash
+# Ollama Voice - Quick launcher
+cd /Users/nasheikh/Desktop/personal/python/scrappers
+python ollama_voice.py "$@"

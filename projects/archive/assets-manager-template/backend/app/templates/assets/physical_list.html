@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Physical Assets - Assets Manager{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h1>Physical Assets</h1>
+    <a href="{{ url_for('assets.physical_add') }}" class="btn">Add New Asset</a>
+</div>
+
+{% if assets %}
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asset in assets %}
+            <tr>
+                <td><strong>{{ asset.name }}</strong></td>
+                <td>{{ asset.category }}</td>
+                <td>{{ asset.location or 'N/A' }}</td>
+                <td>{{ '${:,.2f}'.format(asset.purchase_price) if asset.purchase_price else 'N/A' }}</td>
+                <td>{{ asset.status }}</td>
+                <td>
+                    <a href="{{ url_for('assets.physical_detail', asset_id=asset.id) }}" style="margin-right: 10px;">View</a>
+                    <a href="{{ url_for('assets.physical_edit', asset_id=asset.id) }}">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="card">
+    <p>No physical assets found. <a href="{{ url_for('assets.physical_add') }}">Add your first asset</a></p>
+</div>
+{% endif %}
+{% endblock %}

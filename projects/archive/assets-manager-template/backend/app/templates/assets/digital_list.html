@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Digital Assets - Assets Manager{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h1>Digital Assets</h1>
+    <a href="{{ url_for('assets.digital_add') }}" class="btn">Add New Digital Asset</a>
+</div>
+
+{% if assets %}
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Platform</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asset in assets %}
+            <tr>
+                <td><strong>{{ asset.name }}</strong></td>
+                <td>{{ asset.category }}</td>
+                <td>{{ asset.platform or 'N/A' }}</td>
+                <td>{{ '${:,.2f}'.format(asset.purchase_price) if asset.purchase_price else 'N/A' }}</td>
+                <td>{{ asset.status }}</td>
+                <td>
+                    <a href="{{ url_for('assets.digital_add') }}">View</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="card">
+    <p>No digital assets found. <a href="{{ url_for('assets.digital_add') }}">Add your first digital asset</a></p>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,4 +1,60 @@
-body{
-    color: blue;
+/* body{
+color: blue;
     font-size: 32px;
+} */
+
+.navbar{
+    border: 3px solid red;
+    padding: 10px;
+}
+
+.navbar-top-cont{
+    height: 100px;
+    align-content: center;
+    content: center;
+}
+.navbar-top-cont .title{
+    font-size: 50px;
+    color: rgb(78, 155, 197);
+    text-decoration: none;
+}
+
+.user-icon{
+    height: 50px;
+    width: 50px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    align-content: center;
+    position: absolute;
+    right: 30px;
+    top: 30px
+}
+
+.navbar-act-cont{
+    padding: 10px;
+    display: flex;
+    /*justify-content: center;*/
+    justify-content: space-around;
+}
+
+.navbar-act-cont .nav-act{
+    align-items:normal;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(78, 155, 197);
+}
+/* 
+.navbar-act-cont .nav-act:hover {
+    
+} */
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+    color: white;
+    padding: 10px;
 }

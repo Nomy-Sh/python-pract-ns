@@ -1,4 +1,6 @@
 # Artificial neural network |  | ep4-3 sentdex nnfs
+# Object oriented representation of the NN
+
 import numpy as np
 
 np.random.seed(0)
@@ -11,8 +13,13 @@ X = [[1.0, 2.0, 3.0, 2.5],
 
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
+        self._num_of_neurons = n_neurons
         self.weights = 0.10 * np.random.randn(n_inputs, n_neurons)    
         self.biases = np.zeros((1, n_neurons))
+
+    # extra code by me
+    def __info__(self):
+        print(f"Layer has Neurons: {self._num_of_neurons}, Weights: {self.weights}, Biases: {self.biases}")
 
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases

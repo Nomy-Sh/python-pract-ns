@@ -41,5 +41,5 @@ activation2.forward( dense2.output )
 
 
 
-print(activation2.output[:5])
+print(activation2.output[:5]) # first 5 out of 100
 

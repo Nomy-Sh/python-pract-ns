@@ -22,12 +22,9 @@ class Layer_Dense:
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases
 
-
 class Activation_ReLU:
     def forward(self, inputs):
         self.output = np.maximum(0, inputs)
-
-
 
 
 layer1 = Layer_Dense(2, 5)
@@ -35,7 +32,8 @@ activation1 = Activation_ReLU()
 
 layer1.forward(X)
 activation1.forward(layer1.output)
-#print(layer1.output)
+print(layer1.output)
+print()
 print(activation1.output)
 
 

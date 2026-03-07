@@ -23,8 +23,10 @@ biases2 = [-1.0, 2.0, -0.5]
 
 layer1_outputs = np.dot(inputs, np.array(weights).T) + biases
 
+print("Layer, L1: \n", layer1_outputs)
+
 layer2_outputs = np.dot(layer1_outputs, np.array(weights2).T) + biases2
 
-print(layer2_outputs)
+print("\nLayer, L2: \n", layer2_outputs)
 
 #print(np.shape(inputs))

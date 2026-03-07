@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html >
     <head>
+        <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}"/>
         {% block head %}
         <title> {% block title %} {% endblock %} - Assets manager</title>
-        <navbar></navbar>
+        <div class="navbar">
+            <!-- {% block navbar %}
+
+            {% endblock %} -->
+            <div class="navbar-top-cont"> 
+                <a href="{{url_for('dashboard')}}" class="title"> <center> Assets Manager </center></a>
+                <div class="user-icon">  <center>NS</center> </div>
+            </div>
+            <div class="navbar-act-cont">
+                <a href="{{url_for('physical')}}" class="nav-act" id="nav-act-phy"> Physical Assets</a>
+                <a href="{{url_for('digital')}}" class="nav-act" id="nav-act-dig"> Digital Assets</a>
+                <a href="{{url_for('debts')}}" class="nav-act" id="nav-act-debt"> Debts </a>
+            </div>
+        </div>
         {% endblock %}
     </head>
 
     <body>
+        {% block body %}
+            This is some template content. Ideally to be replaced by other main screen content.
+        {% endblock %}
 
-        <footer></footer>
+        <footer>
+            Copyright 2026-2026
+        </footer>
     </body>
 </html>

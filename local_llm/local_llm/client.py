@@ -7,6 +7,7 @@ from .config import (
     DEFAULT_GENERAL_MODEL,
     DEFAULT_SQL_MODEL,
     DEFAULT_FAST_MODEL,
+    DEFAULT_CODE_MODEL,
     DEFAULT_TIMEOUT,
     DEFAULT_TEMPERATURE,
 )
@@ -265,6 +266,163 @@ Include:
         prompt = f"""Describe this database schema in clear, natural language:
 
 {schema_info}"""
+
+        return self.chat(
+            message=prompt,
+            system=system_prompt,
+            model=model,
+        )
+
+    def generate_code(
+        self,
+        task: str,
+        language: str = "python",
+        context: Optional[str] = None,
+        model: Optional[str] = None,
+    ) -> str:
+        """
+        Generate code based on natural language description.
+
+        Args:
+            task: Description of what the code should do
+            language: Programming language (python, javascript, etc.)
+            context: Optional context (existing code, requirements, etc.)
+            model: Model to use (defaults to code model)
+
+        Returns:
+            Generated code
+
+        Example:
+            code = client.generate_code(
+                task="Create a function to calculate fibonacci numbers",
+                language="python"
+            )
+        """
+        model = model or DEFAULT_CODE_MODEL
+
+        system_prompt = f"""You are an expert {language} developer. Generate clean, efficient, well-documented code.
+
+Guidelines:
+- Write production-ready code
+- Include docstrings/comments
+- Follow {language} best practices
+- Handle edge cases
+- Return ONLY the code, no explanations unless asked"""
+
+        prompt = f"Task: {task}"
+        if context:
+            prompt += f"\n\nContext:\n{context}"
+
+        return self.chat(
+            message=prompt,
+            system=system_prompt,
+            model=model,
+            temperature=0.2,  # Low temperature for consistent code
+        )
+
+    def review_code(
+        self,
+        code: str,
+        focus: str = "general",
+        model: Optional[str] = None,
+    ) -> str:
+        """
+        Review code and provide feedback.
+
+        Args:
+            code: Code to review
+            focus: What to focus on (general, security, performance, style)
+            model: Model to use (defaults to code model)
+
+        Returns:
+            Code review with suggestions
+
+        Example:
+            review = client.review_code(
+                code="def add(a,b): return a+b",
+                focus="style"
+            )
+        """
+        model = model or DEFAULT_CODE_MODEL
+
+        focus_prompts = {
+            "general": "overall code quality, readability, and best practices",
+            "security": "security vulnerabilities and potential exploits",
+            "performance": "performance issues and optimization opportunities",
+            "style": "code style, naming conventions, and formatting",
+        }
+
+        focus_text = focus_prompts.get(focus, focus)
+
+        system_prompt = f"""You are an expert code reviewer. Analyze code focusing on {focus_text}.
+
+Provide:
+- Issues found (if any)
+- Specific suggestions
+- Improved code examples (if needed)
+- Severity levels (critical, warning, info)"""
+
+        prompt = f"""Review this code:
+
+```
+{code}
+```
+
+Focus on: {focus_text}"""
+
+        return self.chat(
+            message=prompt,
+            system=system_prompt,
+            model=model,
+            temperature=0.3,
+        )
+
+    def explain_code(
+        self,
+        code: str,
+        detail_level: str = "concise",
+        model: Optional[str] = None,
+    ) -> str:
+        """
+        Explain what code does in natural language.
+
+        Args:
+            code: Code to explain
+            detail_level: Level of detail (concise, detailed, beginner)
+            model: Model to use (defaults to code model)
+
+        Returns:
+            Natural language explanation
+
+        Example:
+            explanation = client.explain_code(
+                code="lambda x: x**2",
+                detail_level="beginner"
+            )
+        """
+        model = model or DEFAULT_CODE_MODEL
+
+        level_prompts = {
+            "concise": "Provide a brief, high-level explanation",
+            "detailed": "Provide a detailed explanation with step-by-step breakdown",
+            "beginner": "Explain in simple terms for beginners, avoiding jargon",
+        }
+
+        instruction = level_prompts.get(detail_level, level_prompts["concise"])
+
+        system_prompt = f"""You are a code educator. {instruction}.
+
+Focus on:
+- What the code does
+- How it works
+- Why certain approaches are used
+- Any gotchas or edge cases"""
+
+        prompt = f"""Explain this code:
+
+```
+{code}
+```"""
 
         return self.chat(
             message=prompt,

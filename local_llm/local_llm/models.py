@@ -19,6 +19,12 @@ RECOMMENDED_MODELS = {
         "description": "Lightweight, fast responses",
         "ram_required": "~2.3GB",
         "use_cases": ["quick tasks", "simple analysis", "low-latency needs"]
+    },
+    "code": {
+        "name": "qwen2.5-coder:7b",
+        "description": "Specialized for code generation and understanding",
+        "ram_required": "~4.7GB",
+        "use_cases": ["code generation", "code review", "debugging", "refactoring"]
     }
 }
 

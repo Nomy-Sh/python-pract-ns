@@ -9,6 +9,7 @@ OLLAMA_API_BASE = f"{OLLAMA_BASE_URL}/v1"  # OpenAI-compatible endpoint
 DEFAULT_GENERAL_MODEL = os.getenv("OLLAMA_GENERAL_MODEL", "llama3.1:8b")
 DEFAULT_SQL_MODEL = os.getenv("OLLAMA_SQL_MODEL", "llama3.1:8b")  # llama3.1:8b works better than sqlcoder:7b
 DEFAULT_FAST_MODEL = os.getenv("OLLAMA_FAST_MODEL", "phi3:mini")
+DEFAULT_CODE_MODEL = os.getenv("OLLAMA_CODE_MODEL", "qwen2.5-coder:7b")
 
 # Timeouts
 DEFAULT_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "120"))  # seconds

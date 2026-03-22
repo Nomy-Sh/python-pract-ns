@@ -1,0 +1,331 @@
+[YOUR NAME]
+[Your Phone Number] | [Your Email] | [Your Location]
+LinkedIn: linkedin.com/in/yourprofile | GitHub: github.com/yourusername
+
+================================================================================
+BACKEND ENGINEER - MICROSERVICES | DISTRIBUTED SYSTEMS | PYTHON & RUBY
+================================================================================
+
+TECHNICAL SKILLS
+================================================================================
+
+Languages & Frameworks
+• Languages: Ruby, JRuby, Python (intermediate), SQL, Java (basic - Firebase SDK)
+• Backend Frameworks: Sinatra (production), Django (learning), FastAPI (learning)
+• Python Libraries: pandas, numpy, scikit-learn (ML basics)
+
+Backend & Infrastructure
+• Databases: PostgreSQL, MariaDB, MySQL, IBM DB2/AS400, Redis, Firebase Realtime DB
+• ORM: Sequel (production expert - 56 models), Django ORM, SQLAlchemy (learning)
+• Message Queues: Apache Kafka (production), RabbitMQ
+• Search: Apache Solr (production), Elasticsearch
+• Async Processing: Sidekiq Pro (50+ production jobs), Celery (familiar)
+• Caching & Distributed: Redis (caching, distributed locking), Memcached
+
+Architecture & Patterns
+• Microservices Architecture, Event-Driven Architecture (EDA), Service-Oriented Architecture (SOA)
+• RESTful API Design (100+ endpoints), API Versioning, Authentication/Authorization
+• Distributed Systems: Race condition handling, idempotency, eventual consistency
+• Real-time Systems: WebSockets, Firebase real-time sync, mobile backend
+
+DevOps & Tools
+• Containerization: Docker, Docker Compose
+• Version Control: Git, GitHub
+• CI/CD: Continuous Integration/Deployment pipelines
+• Testing: RSpec, pytest, integration/unit testing
+• Monitoring: Prometheus, structured logging, distributed tracing
+• Tools: Foreman, RuboCop, YAML configuration management
+
+Cloud & Data
+• Familiar with AWS/GCP concepts (not production certified)
+• Data Processing: pandas, numpy for ETL and data transformation
+• ML Infrastructure: Model serving concepts, data pipeline design
+
+
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+Backend Engineer | Copart - Yard Core Services                    [Start Date] - Present
+Tech Stack: Ruby/JRuby, Sinatra, Python, Apache Kafka, Redis, Firebase, PostgreSQL/MariaDB, IBM DB2/AS400, Docker
+
+• Architected and maintained 200+ RESTful microservices across 3 interconnected platforms (Tagging, Vehicle Processing, Service Order Management) serving US/UK markets, handling thousands of daily transactions with 99.9% uptime
+
+• Designed dual database architecture managing 56 ORM models (MariaDB) and 116 legacy models (IBM DB2/AS400 mainframe), implementing cross-database joins, custom field mappers for packed decimal conversions, and connection pooling - enabling seamless integration between modern and legacy systems
+
+• Built event-driven architecture processing 1,000+ daily Apache Kafka events for automated vehicle tagging and service order creation, implementing Redis distributed locking to prevent race conditions across multiple server instances
+
+• Implemented real-time data synchronization using Firebase Realtime Database with ORM lifecycle hooks, enabling live mobile app updates without polling for 500+ concurrent users - reduced mobile data consumption by 70% and improved UX
+
+• Developed 50+ asynchronous background jobs using Sidekiq for document generation, bulk operations (10,000+ records), email/SMS notifications, and external API orchestration - designed with idempotent execution, retry logic, and error handling for 99.9% job success rate
+
+• Integrated Apache Solr for full-text search across 100,000+ records with faceted search, real-time indexing via async workers, and query optimization reducing search latency from 3s to 400ms (87% improvement)
+
+• Optimized database queries by implementing eager loading patterns, reducing N+1 queries from 250+ to 6 per API request - decreased API response times by 70% (from 2-3s to 400-600ms) and reduced database load by 60%
+
+• Built UK hazardous waste regulatory compliance module with 3 conditional processing paths, state machine patterns, ATF permit validation, and integration with 6 external Dispatch API endpoints - modified 25+ files, enabled regulatory compliance for £10M+ annual UK operations
+
+• Designed 100+ RESTful API endpoints with versioned APIs (v1, v2, v3), token-based authentication, request validation, error handling, and backward compatibility - supporting 5+ client applications with 0 breaking changes over 2 years
+
+• Implemented service-oriented architecture with standardized lifecycle patterns (validate → execute → respond) across all services, reducing code duplication by 40% and onboarding time for new engineers by 50%
+
+Key Achievements:
+• Reduced API latency by 70% through database query optimization
+• Processed 1,000+ daily Kafka events with 99.9% success rate
+• Built Firebase real-time sync serving 500+ concurrent mobile users
+• Integrated legacy IBM mainframe (116 models) with modern MariaDB system
+• Designed multi-country deployment (US/UK) with country-specific business logic
+
+
+PROJECTS (Python - Demonstrate Framework Proficiency)
+================================================================================
+
+FastAPI + PostgreSQL Task Manager API | Python, FastAPI, SQLAlchemy, Docker
+GitHub: github.com/yourusername/fastapi-task-manager
+
+• Built RESTful CRUD API with FastAPI framework using async/await for non-blocking I/O
+• Implemented SQLAlchemy ORM with models, relationships, eager loading, and transaction management
+• Added JWT token authentication, request validation with Pydantic, API versioning (/v1)
+• Deployed with Docker Compose (PostgreSQL, Redis for caching, API container)
+• Demonstrates: FastAPI proficiency, async Python, ORM patterns, Docker deployment
+
+Django REST Framework E-commerce API | Python, Django, DRF, PostgreSQL
+GitHub: github.com/yourusername/django-ecommerce-api
+
+• Developed multi-model Django application (Users, Products, Orders, Cart) with DRF
+• Implemented Django ORM with select_related/prefetch_related for N+1 prevention
+• Built ViewSets, Serializers, custom permissions, and filtering/pagination
+• Added Django signals for post-save actions (similar to production ORM hooks)
+• Demonstrates: Django proficiency, DRF patterns, Django ORM expertise, RESTful design
+
+Real-Time Event Processing Pipeline | Python, Kafka, Redis, Celery, Docker
+GitHub: github.com/yourusername/kafka-event-processor
+
+• Built Python Kafka consumer processing events with filtering logic and state management
+• Implemented Celery async tasks with Redis backend for document generation
+• Used SQLAlchemy for database persistence with transaction management
+• Deployed with Docker Compose (Kafka, Zookeeper, Redis, PostgreSQL, workers)
+• Demonstrates: Event-driven architecture, Kafka, Celery, distributed systems
+
+
+EDUCATION
+================================================================================
+
+Bachelor of Science in Computer Science | [University Name]              [Graduation Year]
+• Relevant Coursework: Data Structures, Algorithms, Database Systems, Distributed Systems, Operating Systems
+
+
+ADDITIONAL INFORMATION
+================================================================================
+
+• Open Source: Contributor to [relevant open source projects if any]
+• Certifications: [Any relevant certifications - AWS, GCP, etc.]
+• Languages: English (fluent), [Other languages if applicable]
+• Interests: Distributed systems, ML infrastructure, database optimization, system design
+
+
+================================================================================
+KEYWORDS FOR ATS (DO NOT INCLUDE IN FINAL RESUME - FOR YOUR REFERENCE)
+================================================================================
+Backend Engineer, Software Engineer, Python, Ruby, JRuby, Django, FastAPI, Flask
+Microservices, Distributed Systems, RESTful API, Apache Kafka, Redis, PostgreSQL
+MySQL, MariaDB, IBM DB2, AS400, Mainframe, Firebase, Real-time Systems
+Event-Driven Architecture, Service-Oriented Architecture, ORM, SQLAlchemy
+Django ORM, Sequel, Sidekiq, Celery, Background Jobs, Async Processing
+Apache Solr, Elasticsearch, Full-Text Search, Docker, Kubernetes, CI/CD
+API Design, Authentication, Authorization, JWT, Token-based Auth
+Database Optimization, Query Optimization, N+1 Queries, Eager Loading
+Transaction Management, ACID, Distributed Locking, Race Conditions
+Git, GitHub, Testing, RSpec, pytest, Integration Testing, Unit Testing
+System Design, Scalability, High Availability, Performance Optimization
+ML Infrastructure, pandas, numpy, scikit-learn, Data Processing
+Cloud Computing, AWS, GCP, Monitoring, Logging, Distributed Tracing
+Multi-tenancy, Multi-country Deployment, Regulatory Compliance
+Legacy System Integration, Cross-Database Joins, Data Migration
+
+
+================================================================================
+FORMATTING NOTES FOR DOCX CONVERSION
+================================================================================
+
+FONT & SPACING:
+• Font: Use Arial, Calibri, or Helvetica (11-12pt for body, 14-16pt for name)
+• Line spacing: 1.0 or 1.15
+• Margins: 0.5-0.75 inches on all sides
+• Section spacing: 6-12pt between sections
+
+STYLING:
+• Name: Bold, 16-18pt
+• Section headers (TECHNICAL SKILLS, etc.): Bold, 12-14pt, all caps
+• Company names & titles: Bold
+• Dates: Right-aligned on same line as company/title
+• Bullets: Use standard bullet points (•) or dashes (-)
+• Keep it to 1 page if possible, max 2 pages
+
+ATS-FRIENDLY:
+• No headers/footers
+• No tables (use spacing/tabs instead)
+• No graphics/images
+• Simple formatting (bold/italic only)
+• Save as .docx (not PDF unless requested)
+
+CUSTOMIZATION FOR EACH APPLICATION:
+• Reorder bullet points based on job description requirements
+• Add keywords from job posting naturally into bullets
+• Adjust "Learning" to "Proficient" for Python if you build projects first
+• Customize objective/summary if company requires it
+• Remove "Projects" section if you need more space for experience
+
+
+================================================================================
+ALTERNATIVE VERSIONS - CHOOSE BASED ON ROLE
+================================================================================
+
+VERSION A: PYTHON-HEAVY (For "Python Backend Engineer" roles)
+• Move Python frameworks higher in skills
+• Change "learning" to "developing expertise" or "intermediate"
+• Lead with Python projects
+• Emphasize ORM transferable skills more
+
+VERSION B: POLYGLOT/LANGUAGE-AGNOSTIC (For "Backend Engineer" roles)
+• Emphasize "Polyglot Backend Engineer" in header
+• Lead with architecture and patterns over specific languages
+• Downplay Ruby vs Python distinction
+• Focus on distributed systems, microservices, scale
+
+VERSION C: ML-FOCUSED (For "ML Engineer - Infrastructure" roles)
+• Add pandas/numpy higher in skills
+• Emphasize data processing, ETL, data pipelines
+• Mention ML serving patterns (Firebase → model serving)
+• Add "Interested in ML infrastructure and model serving" to summary
+• Include ML model serving project prominently
+
+
+================================================================================
+COVER LETTER PAIRING (Use with Resume)
+================================================================================
+
+Dear Hiring Manager,
+
+I'm a backend engineer with 3+ years of production experience building microservices
+and distributed systems, and I'm excited about the [POSITION] role at [COMPANY].
+
+At Copart, I've architected 200+ RESTful microservices handling thousands of daily
+transactions with distributed systems integration (Apache Kafka, Redis, Firebase),
+dual database architecture (MariaDB + IBM DB2/AS400 mainframe), and real-time data
+synchronization for mobile applications.
+
+Key achievements include:
+• 70% API latency reduction through database query optimization
+• Event-driven architecture processing 1,000+ daily Kafka events
+• Real-time Firebase sync serving 500+ concurrent mobile users
+• Integration of 116 legacy mainframe models with modern MariaDB system
+
+My production experience is in Ruby/JRuby, but I have strong backend fundamentals
+that transfer directly to Python: ORM design (eager loading, lifecycle hooks,
+transaction management), API architecture, distributed systems, and async processing.
+I've been actively learning Django and FastAPI and have built [mention Python
+projects] to demonstrate proficiency.
+
+I'm particularly drawn to [COMPANY] because [SPECIFIC REASON - research their tech
+blog, products, engineering culture]. My experience with [RELEVANT TECH FROM JOB
+POSTING] and passion for [RELEVANT DOMAIN] would allow me to contribute meaningfully
+to [SPECIFIC TEAM/PRODUCT].
+
+I'd love to discuss how my backend engineering experience and distributed systems
+expertise can contribute to [COMPANY]'s [SPECIFIC GOAL/PRODUCT].
+
+Best regards,
+[Your Name]
+
+
+================================================================================
+INTERVIEW PREP CHECKLIST (For FAANG/Big Tech)
+================================================================================
+
+TECHNICAL PREP:
+□ LeetCode: 50-100 problems (Easy: 30, Medium: 50, Hard: 20)
+□ System Design: Study "Designing Data-Intensive Applications" book
+□ Practice explaining your microservices architecture on whiteboard
+□ Review Python fundamentals (list comprehensions, generators, decorators)
+□ Review Django ORM patterns (select_related, prefetch_related, signals)
+□ Practice coding in Python (not just Ruby)
+
+BEHAVIORAL PREP (STAR Format):
+□ Prepare story: UK hazardous waste compliance (complexity)
+□ Prepare story: N+1 query optimization (performance improvement)
+□ Prepare story: Firebase real-time sync (system design)
+□ Prepare story: Distributed locking with Redis (concurrency handling)
+□ Prepare story: Mainframe integration (legacy systems)
+□ Prepare "Why [COMPANY]?" answer (research company culture, products)
+□ Prepare "Why backend engineering?" answer
+□ Prepare "Biggest technical challenge?" answer
+
+COMPANY RESEARCH:
+□ Read engineering blog posts
+□ Understand their tech stack
+□ Know their products/services
+□ Research team structure
+□ Find connections on LinkedIn
+□ Prepare 3-5 questions to ask interviewer
+
+SYSTEM DESIGN TOPICS (For Senior Roles):
+□ Load balancing, horizontal scaling
+□ Database sharding, replication
+□ Caching strategies (write-through, write-behind, cache-aside)
+□ Message queues (Kafka, RabbitMQ)
+□ API gateway patterns
+□ Microservices communication (sync vs async)
+□ CAP theorem, eventual consistency
+□ Rate limiting, throttling
+□ Monitoring, logging, observability
+
+
+================================================================================
+SALARY NEGOTIATION REFERENCE (Research-Based)
+================================================================================
+
+BACKEND ENGINEER SALARY RANGES (USD, 2026):
+
+FAANG (Google, Meta, Amazon, Apple, Microsoft):
+• Entry-Mid Level (0-3 years): $120K-180K base + $50K-150K stock/bonus
+• Mid Level (3-5 years): $150K-220K base + $100K-300K stock/bonus
+• Senior (5-8 years): $180K-280K base + $200K-500K stock/bonus
+
+Tier 2 Tech (Stripe, Airbnb, Uber, Coinbase):
+• Entry-Mid Level: $110K-160K base + $30K-100K stock/bonus
+• Mid Level: $140K-200K base + $80K-200K stock/bonus
+
+Indian Tech (PhonePe, Razorpay, Swiggy, Flipkart):
+• Entry-Mid Level: ₹15L-30L base + bonus/stock
+• Mid Level: ₹25L-50L base + bonus/stock
+
+YOUR POSITIONING:
+• 3+ years production experience = Mid-level
+• Production microservices = premium experience
+• Mainframe integration = rare skill (negotiate higher)
+• Learning Python = slight discount, but strong fundamentals = offset
+• Target: Mid-level ranges with junior Python caveat
+
+NEGOTIATION TIPS:
+• Always negotiate (companies expect it)
+• Ask for 10-20% more than initial offer
+• Emphasize production experience, not language
+• Mention competing offers if you have them
+• Ask about signing bonus, relocation, stock grants
+
+
+================================================================================
+GOOD LUCK! 🚀
+================================================================================
+
+Remember:
+✅ You have production experience most candidates lack
+✅ Your database skills are rare and valuable
+✅ Backend fundamentals transfer across languages
+✅ You're a proven fast learner
+✅ Build 2-3 Python projects before applying seriously
+✅ Practice system design - big tech interviews focus heavily on this
+✅ Be honest about learning Python, confident about backend fundamentals
+✅ Companies hire engineers, not programming languages
+
+You've got this! 💪
